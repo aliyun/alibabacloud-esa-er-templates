@@ -1,0 +1,8 @@
+name = "Follow origin 302"
+description = "Enable a routine to follow 302 redirects from the origin, instead of waiting for further instructions from the clients."
+entry = "src/index.js"
+codeVersions = [ ]
+
+[dev]
+port = 18080
+localUpstream = ''

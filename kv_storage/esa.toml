@@ -1,0 +1,8 @@
+name = "KV Storage"
+description = "A simple example to help you understand how to use the Edge KV API operations."
+entry = "src/index.js"
+codeVersions = [ ]
+
+[dev]
+port = 18080
+localUpstream = ''

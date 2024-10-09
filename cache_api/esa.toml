@@ -1,0 +1,8 @@
+name = "Cache API"
+description = 'A simple example to help you quickly understand how to use the cache API.'
+entry = "src/index.js"
+codeVersions = [ ]
+
+[dev]
+port = 18080
+localUpstream = ''

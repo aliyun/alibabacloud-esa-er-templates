@@ -1,0 +1,8 @@
+name = "Type C signing"
+description = "Use URL signing type C to prevent unauthorized access to your website assets."
+entry = "src/index.js"
+codeVersions = [ ]
+
+[dev]
+port = 18080
+localUpstream = ''

@@ -1,0 +1,8 @@
+name = "AB Test"
+description = 'Route traffic to test services of different versions.'
+entry = "src/index.js"
+codeVersions = [ ]
+
+[dev]
+port = 18080
+localUpstream = ''

@@ -1,0 +1,8 @@
+name = "Modify headers"
+description = "Initiate a subrequest to fetch resources from the origin, and, after a response is returned, modify the response header, and serve the response to the clients."
+entry = "src/index.js"
+codeVersions = [ ]
+
+[dev]
+port = 18080
+localUpstream = ''
