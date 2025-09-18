@@ -1,0 +1,7 @@
+{
+  "name": "qwik-template",
+  "assets": {
+    "directory": "./dist",
+    "notFoundStrategy": "404Page"
+  }
+}
