@@ -1,0 +1,9 @@
+{
+  "name": "ai-element",
+  "assets": {
+    "directory": "./out"
+  },
+  "dev": {
+    "port": 18080
+  }
+}
