@@ -5,10 +5,14 @@
   "keywords": [],
   "private": false,
   "files": [
-    "functions/*/esa.jsonc",
-    "functions/*/readme.md",
-    "functions/*/src/**"
+    "src/manifest.json",
+    "src/*/esa.jsonc",
+    "src/*/readme.md",
+    "src/*/src/**"
   ],
+  "scripts": {
+    "prepack": "node scripts/prepare-functions.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/aliyun/alibabacloud-esa-er-templates"
