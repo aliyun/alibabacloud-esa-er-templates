@@ -1,0 +1,7 @@
+{
+  "name": "react-router-template",
+  "assets": {
+    "directory": "./build/client",
+    "notFoundStrategy": "singlePageApplication"
+  }
+}

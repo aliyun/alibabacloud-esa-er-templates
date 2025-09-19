@@ -29,5 +29,6 @@
     "typescript": "latest",
     "vite": "latest",
     "vite-tsconfig-paths": "latest"
-  }
+  },
+  "repository": "https://github.com/aliyun/alibabacloud-esa-er-templates"
 }
