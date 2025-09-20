@@ -56,11 +56,48 @@ const models = [
   },
 ];
 
+// Mock response data generator
+const generateMockResponse = (userMessage: string) => {
+  const mockResponses = [
+    {
+      reasoning: "Let me analyze your question and provide a detailed answer.",
+      text: "This is a great question! Based on my understanding, I can provide you with the following information and suggestions. Let me explain the related concepts and solutions in detail.",
+      sources: [
+        {
+          url: "https://example.com/source1",
+          title: "Related Documentation 1",
+        },
+        { url: "https://example.com/source2", title: "Technical Guide" },
+      ],
+    },
+    {
+      reasoning:
+        "I need to carefully consider all aspects of this question to ensure I provide an accurate answer.",
+      text: "Based on your question, I suggest thinking from the following perspectives: first, we need to understand the basic concepts; second, analyze specific application scenarios; finally, provide practical solutions.",
+      sources: [{ url: "https://example.com/guide", title: "Complete Guide" }],
+    },
+    {
+      reasoning:
+        "This is a complex question, let me analyze it step by step and provide a comprehensive answer.",
+      text: "Thank you for your question! This question involves considerations at multiple levels. Let me analyze it in detail for you: 1) Theoretical foundation; 2) Practical application; 3) Best practice recommendations. I hope this information is helpful to you!",
+      sources: [
+        { url: "https://example.com/best-practices", title: "Best Practices" },
+        { url: "https://example.com/examples", title: "Example References" },
+      ],
+    },
+  ];
+
+  // Select different responses based on user message length
+  const responseIndex = userMessage.length % mockResponses.length;
+  return mockResponses[responseIndex];
+};
+
 const ChatBotDemo = () => {
   const [input, setInput] = useState("");
   const [model, setModel] = useState<string>(models[0].value);
   const [webSearch, setWebSearch] = useState(false);
-  const { messages, sendMessage, status } = useChat();
+  const [mockMode, setMockMode] = useState(true);
+  const { messages, sendMessage, status, setMessages } = useChat();
 
   // Mock conversation shown before any real messages are sent
   type ChatMessage = (typeof messages)[number];
@@ -108,6 +145,50 @@ const ChatBotDemo = () => {
       return;
     }
 
+    // If mock mode is enabled, only add mock response and return
+    if (mockMode && message.text) {
+      const mockResponse = generateMockResponse(message.text);
+
+      // Create user message
+      const userMessage: ChatMessage = {
+        id: `user-${Date.now()}`,
+        role: "user",
+        parts: [
+          {
+            type: "text",
+            text: message.text,
+          },
+        ],
+      } as unknown as ChatMessage;
+
+      // Create mock assistant message
+      const mockMessage: ChatMessage = {
+        id: `mock-${Date.now()}`,
+        role: "assistant",
+        parts: [
+          {
+            type: "reasoning",
+            text: mockResponse.reasoning,
+          },
+          {
+            type: "text",
+            text: mockResponse.text,
+          },
+          ...mockResponse.sources.map((source) => ({
+            type: "source-url",
+            url: source.url,
+            title: source.title,
+          })),
+        ],
+      } as unknown as ChatMessage;
+
+      // Add both user and assistant messages
+      setMessages((prev) => [...prev, userMessage, mockMessage]);
+      setInput("");
+      return;
+    }
+
+    // Send real message only if not in mock mode
     sendMessage(
       {
         text: message.text || "Sent with attachments",
@@ -254,6 +335,12 @@ const ChatBotDemo = () => {
               >
                 <GlobeIcon size={16} />
                 <span>Search</span>
+              </PromptInputButton>
+              <PromptInputButton
+                variant={mockMode ? "default" : "ghost"}
+                onClick={() => setMockMode(!mockMode)}
+              >
+                <span>Mock</span>
               </PromptInputButton>
               <PromptInputModelSelect
                 onValueChange={(value) => {
