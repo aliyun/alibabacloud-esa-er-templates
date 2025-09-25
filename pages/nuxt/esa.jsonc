@@ -1,6 +1,5 @@
 {
   "name": "nuxt-template",
-  "buildCommand": "npm run generate",
   "assets": {
     "directory": "./dist",
     "notFoundStrategy": "404Page"
