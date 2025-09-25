@@ -4,15 +4,13 @@
   "description": "Modern ESA Pages template built with Nuxt.js",
   "private": true,
   "scripts": {
-    "build": "nuxt build",
+    "build": "nuxt generate",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
     "preview": "nuxt preview",
     "typecheck": "nuxt typecheck"
   },
   "devDependencies": {
     "@nuxt/devtools": "^1.0.8",
-
     "@nuxtjs/tailwindcss": "^6.12.0",
     "nuxt": "^3.12.4",
     "typescript": "^5.5.4",
