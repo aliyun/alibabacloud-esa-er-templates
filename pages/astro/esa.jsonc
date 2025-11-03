@@ -1,6 +1,7 @@
 {
-    "name": "astro-template",
-    "assets": {
-      "directory": "./dist"
-    }
+  "name": "astro-template",
+  "installCommand": "npm install",
+  "assets": {
+    "directory": "./dist"
   }
+}
