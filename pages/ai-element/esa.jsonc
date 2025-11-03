@@ -1,5 +1,6 @@
 {
   "name": "ai-element",
+  "installCommand": "npm install",
   "assets": {
     "directory": "./out"
   },
