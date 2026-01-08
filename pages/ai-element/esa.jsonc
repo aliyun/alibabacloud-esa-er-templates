@@ -1,6 +1,6 @@
 {
   "name": "ai-element",
-  "installCommand": "npm install",
+  "installCommand": "pnpm install",
   "assets": {
     "directory": "./out"
   },

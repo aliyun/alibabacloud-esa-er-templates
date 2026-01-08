@@ -1,6 +1,6 @@
 {
   "name": "nextjs-template",
-  "installCommand": "npm install",
+  "installCommand": "pnpm install",
   "assets": {
     "directory": "./out",
     "notFoundStrategy": "404Page"
