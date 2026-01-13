@@ -42,8 +42,8 @@ importers:
         specifier: ^1.2.2
         version: 1.2.2(@types/react@19.1.13)(react@19.1.0)
       ai:
-        specifier: ^5.0.45
-        version: 5.0.45(zod@4.1.9)
+        specifier: ^5.0.52
+        version: 5.0.52(zod@4.1.9)
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -125,6 +125,12 @@ packages:
 
   '@ai-sdk/gateway@1.0.23':
     resolution: {integrity: sha512-ynV7WxpRK2zWLGkdOtrU2hW22mBVkEYVS3iMg1+ZGmAYSgzCqzC74bfOJZ2GU1UdcrFWUsFI9qAYjsPkd+AebA==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      zod: ^3.25.76 || ^4
+
+  '@ai-sdk/gateway@1.0.29':
+    resolution: {integrity: sha512-o9LtmBiG2WAgs3GAmL79F8idan/UupxHG8Tyr2gP4aUSOzflM0bsvfzozBp8x6WatQnOx+Pio7YNw45Y6I16iw==}
     engines: {node: '>=18'}
     peerDependencies:
       zod: ^3.25.76 || ^4
@@ -1321,6 +1327,12 @@ packages:
 
   ai@5.0.45:
     resolution: {integrity: sha512-go6J78B1oTXZMN2XLlNJnrFxwcqXQtpPqUVyk1wvzvpb2dk5nP9yNuxqqOX9HrrKuf5U9M6rSezEJWr1eEG9RA==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      zod: ^3.25.76 || ^4
+
+  ai@5.0.52:
+    resolution: {integrity: sha512-GLlRHjMlvN9+w7UYGxCpUQ8GgCRv5Z+JCprRH3Q8YbXJ/JyIc6EP9+YRUmQsyExX/qQsuehe7y/LLygarbSTOw==}
     engines: {node: '>=18'}
     peerDependencies:
       zod: ^3.25.76 || ^4
@@ -3408,6 +3420,12 @@ snapshots:
       '@ai-sdk/provider-utils': 3.0.9(zod@4.1.9)
       zod: 4.1.9
 
+  '@ai-sdk/gateway@1.0.29(zod@4.1.9)':
+    dependencies:
+      '@ai-sdk/provider': 2.0.0
+      '@ai-sdk/provider-utils': 3.0.9(zod@4.1.9)
+      zod: 4.1.9
+
   '@ai-sdk/provider-utils@3.0.9(zod@4.1.9)':
     dependencies:
       '@ai-sdk/provider': 2.0.0
@@ -4568,6 +4586,14 @@ snapshots:
   ai@5.0.45(zod@4.1.9):
     dependencies:
       '@ai-sdk/gateway': 1.0.23(zod@4.1.9)
+      '@ai-sdk/provider': 2.0.0
+      '@ai-sdk/provider-utils': 3.0.9(zod@4.1.9)
+      '@opentelemetry/api': 1.9.0
+      zod: 4.1.9
+
+  ai@5.0.52(zod@4.1.9):
+    dependencies:
+      '@ai-sdk/gateway': 1.0.29(zod@4.1.9)
       '@ai-sdk/provider': 2.0.0
       '@ai-sdk/provider-utils': 3.0.9(zod@4.1.9)
       '@opentelemetry/api': 1.9.0
