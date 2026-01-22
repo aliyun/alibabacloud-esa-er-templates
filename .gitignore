@@ -1,6 +1,6 @@
 
 build
 node_modules
-src
+/src
 .DS_Store
 src/.DS_Store

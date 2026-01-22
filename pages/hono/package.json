@@ -1,0 +1,15 @@
+{
+  "name": "hono-esa-template",
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "preview": "$npm_execpath run build && vite preview"
+  },
+  "dependencies": {
+    "hono": "^4.11.4"
+  },
+  "devDependencies": {
+    "@hono/vite-ssg": "^0.3.3",
+    "vite": "^6.3.5"
+  }
+}
