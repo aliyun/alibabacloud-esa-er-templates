@@ -1,10 +1,5 @@
 
 build
 node_modules
-src
+/src/
 .DS_Store
-src/.DS_Store
-# Track source files in the additional Pages templates.
-!pages/astro-portfolio/src/
-!pages/starlight-docs/src/
-!pages/echarts-dashboard/src/

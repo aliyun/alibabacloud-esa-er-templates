@@ -18,9 +18,21 @@
 
 ## Pages templates
 
+- [AI Elements](./pages/ai-element/README.md)
+- [Astro](./pages/astro/README.md)
 - [Personal portfolio (Alex)](./pages/astro-portfolio/README.md)
-- [Documentation](./pages/starlight-docs/README.md)
-- [Data dashboard](./pages/echarts-dashboard/README.md)
+- [Data dashboard (ECharts)](./pages/echarts-dashboard/README.md)
+- [Gatsby](./pages/gatsby/README.md)
+- [Material UI + React Router](./pages/material-ui-react-router/README.md)
+- [Next.js](./pages/nextjs/README.md)
+- [Nuxt](./pages/nuxt/README.md)
+- [Qwik](./pages/qwik/README.md)
+- [React Chatbot](./pages/react-chatbot/README.md)
+- [React Router](./pages/react-router/README.md)
+- [Documentation (Starlight)](./pages/starlight-docs/README.md)
+- [Svelte](./pages/svelte/README.md)
+- [React (Vite)](./pages/vite-react/README.md)
+- [Vue (Vite)](./pages/vite-vue/README.md)
 
 Each folder is a standalone project with its own `esa.jsonc`. Use its folder name as `TemplateName`.
 
