@@ -16,6 +16,14 @@
 - [Cache API](./cache_api/readme.md)
 - [SSR Demo](./simple_ssr/readme.md)
 
+## Pages templates
+
+- [Personal portfolio (Alex)](./pages/astro-portfolio/README.md)
+- [Documentation](./pages/starlight-docs/README.md)
+- [Data dashboard](./pages/echarts-dashboard/README.md)
+
+Each folder is a standalone project with its own `esa.jsonc`. Use its folder name as `TemplateName`.
+
 ## LICENSE
 
 [LICENSE](./LICENSE)

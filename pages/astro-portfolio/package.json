@@ -1,0 +1,33 @@
+{
+  "name": "astro-portfolio",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev --host 127.0.0.1",
+    "build": "astro check && astro build",
+    "preview": "astro preview --host 127.0.0.1",
+    "check": "astro check"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/mdx": "^8.0.2",
+    "@astrojs/rss": "^4.0.10",
+    "@astrojs/sitemap": "^3.2.1",
+    "@fontsource/inter": "^5.0.17",
+    "@fontsource/lora": "^5.0.16",
+    "@tailwindcss/typography": "^0.5.10",
+    "astro": "^7.3.5",
+    "clsx": "^2.1.0",
+    "sharp": "^0.33.3",
+    "tailwind-merge": "^3.0.0",
+    "tailwindcss": "^4.1.0",
+    "typescript": "^5.4.2",
+    "@astrojs/markdown-remark": "^7.3.0",
+    "@astrojs/markdown-satteri": "^0.4.0",
+    "@tailwindcss/vite": "^4.1.0"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

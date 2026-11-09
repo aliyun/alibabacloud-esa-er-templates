@@ -1,0 +1,25 @@
+{
+  "name": "starlight-docs",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev --host 127.0.0.1",
+    "build": "astro check && astro build",
+    "preview": "astro preview --host 127.0.0.1",
+    "check": "astro check"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "dependencies": {
+    "astro": "^7.3.5",
+    "@astrojs/starlight": "^0.42.4",
+    "@astrojs/markdown-remark": "^7.3.0",
+    "@astrojs/starlight-tailwind": "^5.0.0",
+    "tailwindcss": "^4.1.0",
+    "@tailwindcss/vite": "^4.1.0",
+    "@astrojs/check": "^0.9.4",
+    "typescript": "^5.9.0"
+  }
+}
