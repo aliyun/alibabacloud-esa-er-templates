@@ -1,0 +1,51 @@
+---
+title: Writing content
+description: Create pages with Markdown and built-in components.
+sidebar:
+  order: 3
+---
+
+import { Tabs, TabItem, Steps } from '@astrojs/starlight/components';
+
+## Create a page
+
+<Steps>
+1. Create a Markdown file in `src/content/docs/start/`.
+2. Add a `title`, `description`, and optional sidebar order in frontmatter.
+3. Commit your changes. The build generates pages and a search index.
+</Steps>
+
+## Use built-in components
+
+<Tabs>
+  <TabItem label="Develop">
+
+```bash
+npm ci
+npm run dev
+```
+
+</TabItem>
+  <TabItem label="Build">
+
+```bash
+npm run build
+npm run preview
+```
+
+</TabItem>
+</Tabs>
+
+## Callouts and code
+
+:::tip[Keep documentation simple]
+Prefer Markdown and built-in components for callouts, tabs, syntax highlighting, and copy buttons.
+:::
+
+```js title="example.js"
+export const message = 'Hello, ESA!';
+```
+
+## Add images
+
+Add images to the project and reference them with Markdown image syntax. Provide accurate alternative text for accessibility.

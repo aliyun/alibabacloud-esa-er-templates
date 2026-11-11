@@ -1,0 +1,31 @@
+---
+title: Let knowledge grow.
+description: From your first page to a global audience, ESA Pages helps you focus on knowledge that matters.
+template: splash
+hero:
+  tagline: Great products start with clear documentation. Write in Markdown and let Starlight handle navigation, search, code highlighting, and responsive layouts.
+  actions:
+    - text: Get started
+      link: /start/quickstart/
+      icon: right-arrow
+    - text: Deploy to ESA
+      link: /guides/deployment/
+      variant: secondary
+---
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+## Focus on content
+
+<CardGrid>
+  <Card title="Start with Markdown" icon="document">Pages, headings, and code blocks are plain text. Add a file to create a page with automatic navigation.</Card>
+  <Card title="Find every answer" icon="magnifying-glass">Full-text search is indexed at build time. Search titles, sections, and content without a server or API key.</Card>
+  <Card title="Designed for reading" icon="open-book">Use Starlight's responsive navigation, color themes, copy buttons, and table of contents.</Card>
+  <Card title="Publish at the edge" icon="rocket">Deploy static HTML, CSS, and JavaScript directly to ESA Pages.</Card>
+</CardGrid>
+
+## Choose your next step
+
+<CardGrid>
+  <LinkCard title="Write your first page" description="Explore Markdown, MDX, and built-in components." href="/start/writing/" />
+  <LinkCard title="Build and publish" description="Deliver your documentation to readers." href="/guides/deployment/" />
+</CardGrid>

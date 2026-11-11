@@ -1,0 +1,9 @@
+{
+  "name": "astro-portfolio",
+  "installCommand": "npm ci",
+  "buildCommand": "npm run build",
+  "assets": {
+    "directory": "./dist",
+    "notFoundStrategy": "404Page"
+  }
+}
